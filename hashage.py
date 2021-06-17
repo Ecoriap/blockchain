@@ -6,10 +6,6 @@ import getpass
 
 mdp = getpass.getpass('Mot de passe chifré: ')
 
-mdp = mdp.encode()
-
-mdp_sign = sha512(mdp).hexdigest()
-print (mdp_sign)
 
 
 
@@ -26,6 +22,9 @@ print (user_mdp_sign)
 
 #comparaison du mdp entré par l'utilisateur au mdp de reference
 
-if user_mdp_sign == mdp_sign:
+user_message = getpass.getpass('Votre message: ')
 
-	print ("ok")
+user_message = user_message.encode()
+
+user_message_sign = sha512(user_message).hexdigest()
+print (user_message_sign)
