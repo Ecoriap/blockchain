@@ -4,7 +4,7 @@ import getpass
 
 #creation et hashage du mot de passe de reference
 
-mdp = getpass.getpass('mot de passe reference: ')
+mdp = getpass.getpass('Mot de passe chifré: ')
 
 mdp = mdp.encode()
 
@@ -15,7 +15,7 @@ print (mdp_sign)
 
 #entree et hashage du mdp utilisateur 
 
-user_mdp = getpass.getpass('mot de passe: ')
+user_mdp = getpass.getpass('Votre mot de passe: ')
 
 user_mdp = user_mdp.encode()
 
